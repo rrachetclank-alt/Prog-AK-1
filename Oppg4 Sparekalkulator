@@ -1,2 +1,15 @@
 # Oppg4 Sparekalkulator Isak
 # Spør om oppstarts beløp, innskudd per måned, antall år/ mnd. du sparer
+
+startbelop = float(input("Skriv inn startbeløp: "))
+innskudd = float(input("Skriv inn innskudd per måned: "))
+årlig_rente = float(input("Skriv inn årlig rente i prosent: "))
+antall_år = int(input("Skriv inn antall år du sparer: "))
+
+# Print utviklingen av sparebeløpet for hvert år
+print("Utvikling av sparebeløpet:")
+for år in range(1, antall_år + 1):
+    # Beregn beløpet etter hvert år med innskudd og rente
+    belop_etter_år = startbelop * (1 + årlig_rente / 100) ** år + innskudd * 12 * ((1 + årlig_rente / 100) ** år - 1) / (årlig_rente / 100)
+    print(f"Etter {år} år: {belop_etter_år:.2f} kr")
+    
