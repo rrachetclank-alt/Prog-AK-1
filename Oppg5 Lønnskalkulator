@@ -1,2 +1,8 @@
 # Oppg5 Lønnskalkulator # KAIFI LAIFI SIN
 #  Spør om timelønn, arbeidstimer i uka overtid inkludert, evt. tillegg for overtid og  Regner ut brutto og netto årslønn og månedslønn.
+
+def lønnskalk(timelønn, timer_uke, overtidstimer_mnd):
+    ordiner_lonn = timelønn * timer_uke * 4 * 12
+    print(ordiner_lonn)
+
+
