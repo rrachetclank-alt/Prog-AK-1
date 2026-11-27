@@ -37,10 +37,20 @@ def skattekalkulator():
     # Start
     # Starter kalkulatoren og spør om brutto årsinntekt
     dekorasjon = "¨" * 60
+    dekorasjon2 = "¤" * 60
     print(dekorasjon)
     print("Velkommen til skattekalkulatoren!")
     print(dekorasjon)
+    # Spør bruker om brutto årsinntekt
     brutto = float(input("Skriv inn brutto årsinntekt: "))
+    print(dekorasjon2)
+
+    # Spør om bruker har fradrag.
+    har_fradrag = input("Har du fradrag? (ja/nei): ").lower()
+    if har_fradrag == "ja":
+        fradrag = float(input("Skriv inn fradrag i kroner: "))
+    else:
+        fradrag = 0
 
     # Finn riktig skatteprosent fra skattegrenser-funksjonen
     skatteprosent = skattegrenser(brutto)
@@ -49,17 +59,29 @@ def skattekalkulator():
     skatt = brutto * skatteprosent / 100
     netto = brutto - skatt
 
+    # Beregner minstefradrag
+    minstefradrag = brutto * 0.46
+    minstefradrag = min(minstefradrag, MINSTEFRADRAG_MAKS)
+
+    # Beregner alminnelig inntekt
+    alminnelig_inntekt = brutto - minstefradrag - PERSONFRADRAG
+    alminnelig_inntekt = alminnelig_inntekt - fradrag
+    alminnelig_inntekt = max(alminnelig_inntekt, 0)
+
+    
+
     # Viser resultatene
     print(dekorasjon)
     print("Resultater")
     print(dekorasjon)
     print(f"Brutto årslønn: {brutto:.2f} kr")
+    print(f"Fradrag: {fradrag:.2f} kr")
     print(f"Skatteprosent: {skatteprosent} %")
     print(f"Skatt: {skatt:.2f} kr")
     print(dekorasjon)
     print(f"Netto årslønn: {netto:.2f} kr")
     print(f"Omtrentlig månedslønn etter skatt: {netto / 12:.2f} kr")
-    print(dekorasjon)
+    print(dekorasjon2)
 
 # Kjører funksjonen for å starte skattekalkulatoren
 skattekalkulator()
