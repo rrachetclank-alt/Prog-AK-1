@@ -10,6 +10,8 @@ sum = belop - pris
 print(dekorasjon)
 print("Du skal få tilbake", sum, "kr.")
 
+#def (pris, belop)
+
 denominasjoner = [
     (1000, "tusenlapp"),
     (500, "femhundrelapp"),
@@ -32,4 +34,3 @@ for verdi, navn in denominasjoner:
 
     if antall > 0:
         print(antall, navn)
-        
