@@ -1,2 +1,40 @@
 # Oppg2 Vekselautomat KAIF
 # Spør hvor mye du penger du har, hvor mye det du skal kjøpe koster og regner ut vekselen du får tilbake. 
+
+pris = int(input("Hvor mye koster varen din? "))
+belop = int(input("Hvor mye betaler du med? "))
+
+sum = belop - pris
+
+print("Du skal få tilbake", sum, "kr.")
+
+tusenlapp = sum // 1000
+tusen = sum % 1000
+
+femhundrelapp = tusen // 500
+femhundre = tusen % 500
+
+tohundrelapp = femhundre // 200
+tohundre = femhundre % 200
+
+hundrelapp = tohundre // 100
+hundre = tohundre % 100
+
+femtilapp = hundre // 50
+femti = hundre % 50
+
+tjuekroner = femti // 20
+tjue = femti % 20
+
+tikroner = tjue // 10
+ti = tjue % 10
+
+femkroner = ti // 5
+fem = ti % 5
+
+enkroner = fem // 1
+en = fem % 1
+
+print("Du får: ", tusenlapp, (" tusenlapp, ", femhundrelapp, " femhundrelapp, ",
+ tohundrelapp, " tohundrelapp, ", hundrelapp, " hundrelapp, ", femtilapp, " femtilapp, ",
+  tjuekroner, " tjuekroner, ", tikroner, " tikroner, ", femkroner, " femkroner, ", enkroner, " enkroner."))
