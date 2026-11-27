@@ -14,11 +14,11 @@ def lønnskalk(timelønn, timer_uke, overtidstimer_mnd, overtids_tillegg, skatte
     lonn_etter_skatt_mnd = lonn_etter_skatt_ar // 12
 
     print("Ordinær lønn er ", ordiner_lonn,  " kr i året.")
-    print("Overtidsbetaling er ", overtidsbetaling, " kr i året.")
+    print("Overtidsbetaling er ", overtidsbetaling, " kr i året.\n\n")
     print("Brutto lønn per år er ", brutto_lonn_ar, " kr i året.")
-    print("Brutto lønn i mnd er ", brutto_lonn_mnd, " kr i mnd.")
+    print("Brutto lønn i mnd er ", brutto_lonn_mnd, " kr i mnd.\n\n")
 
-    print("Skattetrekk er ", skattetrekk, " kr i året.")
+    print("Skattetrekk er ", skattetrekk, " kr i året.\n\n")
 
     print("Lønn etter skatt er ", lonn_etter_skatt_ar, " kr i året.")
     print("Lønn etter skatt er ", lonn_etter_skatt_mnd, " kr i mnd.")
