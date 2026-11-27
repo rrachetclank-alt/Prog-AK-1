@@ -1,2 +1,24 @@
-# Oppg5 Lønnskalkulator 
+# Oppg5 Lønnskalkulator # KAIFI LAIFI SIN
 #  Spør om timelønn, arbeidstimer i uka overtid inkludert, evt. tillegg for overtid og  Regner ut brutto og netto årslønn og månedslønn.
+
+def lønnskalk(timelønn, timer_uke, overtidstimer_mnd, overtids_tillegg, skatteprosent):
+    ordiner_lonn = timelønn * timer_uke * 4 * 12
+    overtidsbetaling = overtidstimer_mnd * (timelønn + overtids_tillegg) * 12
+
+    brutto_lonn_ar = overtidsbetaling + ordiner_lonn
+    brutto_lonn_mnd = brutto_lonn_ar // 12
+
+    lonn_etter_skatt_ar = brutto_lonn_ar - (brutto_lonn_ar * skatteprosent // 100)
+    lonn_etter_skatt_mnd = lonn_etter_skatt_ar // 12
+
+    print("Ordinær lønn er ", ordiner_lonn,  " kr i året.")
+    print("Overtidsbetaling er ", overtidsbetaling, " kr i året." )
+    print("Brutto lønn per år er ", brutto_lonn_ar, " kr i året.")
+    print("Brutto lønn i mnd er ", brutto_lonn_mnd, " kr i mnd.")
+    print("Lønn etter skatt er ", lonn_etter_skatt_ar, " kr i året.")
+    print("Lønn etter skatt er ", lonn_etter_skatt_mnd, " kr i mnd.")
+
+
+
+lønnskalk(250, 40, 12, 150, 22)
+

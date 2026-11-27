@@ -1,2 +1,36 @@
-# Oppg2 Vekselautomat
+# Oppg2 Vekselautomat KAIF
 # Spør hvor mye du penger du har, hvor mye det du skal kjøpe koster og regner ut vekselen du får tilbake. 
+dekorasjon = "¨" * 60
+
+pris = int(input("Hvor mye koster varen din? "))
+belop = int(input("Hvor mye betaler du med? "))
+
+sum = belop - pris
+
+print(dekorasjon)
+print("Du skal få tilbake", sum, "kr.")
+
+#def (pris, belop)
+
+denominasjoner = [
+    (1000, "tusenlapp"),
+    (500, "femhundrelapp"),
+    (200, "tohundrelapp"),
+    (100, "hundrelapp"),
+    (50, "femtilapp"),
+    (20, "tjuekroner"),
+    (10, "tikroner"),
+    (5, "femkroner"),
+    (1, "enkroner"),
+]
+
+rest = sum
+
+print("Du får:")
+
+for verdi, navn in denominasjoner:
+    antall = rest // verdi
+    rest %= verdi
+
+    if antall > 0:
+        print(antall, navn)
