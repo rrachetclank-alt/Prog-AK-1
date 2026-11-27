@@ -1,2 +1,10 @@
 # Oppg3 Inflasjonskalkulator Jonas
-# Spør om prisen på varen og antall år, Kalkulerer økning over tid, viser økning for hvert år du velger grensa
+# Spør om prisen på varen og antall år, Kalkulerer økning over tid,
+# viser økning for hvert år du velger grensa
+
+# Pseudokode:
+# 1. Spør om prisen på varen
+# 2. Spør om antall år
+# 3. Spør om inflasjonsrate
+# 4. Kalkuler økning for hvert år
+# 5. Vis resultatene
